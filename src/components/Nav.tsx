@@ -34,7 +34,7 @@ export function Nav({
     >
       <div className="mx-auto max-w-6xl px-6 flex items-center justify-between">
         <a href="#hero" className="font-mono text-base font-semibold cursor-blink">
-          alex
+          dehansa.d
         </a>
         <nav className="hidden md:flex items-center gap-1">
           {NAV.map((n) => (

@@ -10,12 +10,12 @@ import {
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const NAV = [
-  { id: "skills", label: "./skills" },
-  { id: "projects", label: "./projects" },
-  { id: "certs", label: "./certs" },
-  { id: "blog", label: "./blog" },
-  { id: "extracurricular", label: "./extracurricular" },
-  { id: "education", label: "./education" },
+  { id: "skills", label: "skills" },
+  { id: "projects", label: "projects" },
+  { id: "certs", label: "certs" },
+  { id: "blog", label: "blog" },
+  { id: "extracurricular", label: "extracurricular" },
+  { id: "education", label: "education" },
   { id: "contact", label: "contact" },
 ];
 

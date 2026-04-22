@@ -3,9 +3,9 @@ import { SOCIALS } from "./data";
 export function Footer() {
   return (
     <footer style={{ borderTop: "1px solid var(--border)" }} className="py-10">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="my-4 mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-mono text-xs" style={{ color: "var(--muted-foreground)" }}>
-          alex · Built with <span className="text-primary">♥</span> and{" "}
+          dehansa.d · Built with <span className="text-primary">♥</span> and{" "}
           <span className="text-primary">☕</span>
         </p>
         <div className="flex items-center gap-4">
@@ -13,6 +13,7 @@ export function Footer() {
             <a
               key={label}
               href={href}
+              target="_blank"
               aria-label={label}
               className="transition-colors"
               style={{ color: "var(--muted-foreground)" }}
