@@ -1,6 +1,7 @@
-import { Github, ExternalLink } from "lucide-react";
+import {  ExternalLink } from "lucide-react";
 import { Section } from "./Section";
 import { PROJECTS } from "./data";
+import { FaGithub } from "react-icons/fa";
 
 export function Projects() {
   return (
@@ -53,7 +54,7 @@ export function Projects() {
                   ((e.currentTarget as HTMLAnchorElement).style.color = "var(--muted-foreground)")
                 }
               >
-                <Github size={16} />
+                <FaGithub size={16} />
               </a>
               <a
                 href={p.demo}
