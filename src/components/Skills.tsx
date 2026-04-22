@@ -1,39 +1,46 @@
-import { AnimatedSection } from "./AnimatedSection";
-import { SectionHeading } from "./SectionHeading";
+import { Section } from "./Section";
+import { SKILL_GROUPS } from "./data";
 
-const categories = [
-  { title: "Languages", items: ["Java", "Python", "JavaScript"] },
-  { title: "Frameworks", items: ["React", "Spring Boot"] },
-  { title: "Tools", items: ["Git", "Docker", "Figma"] },
-  { title: "Concepts", items: ["REST APIs", "Authentication", "OOP"] },
-];
-
-export function SkillsSection() {
+export function Skills() {
   return (
-    <section id="skills" className="py-24 px-4 bg-secondary/30">
-      <div className="max-w-6xl mx-auto">
-        <AnimatedSection>
-          <SectionHeading title="Skills" subtitle="Technologies and concepts I work with." />
-        </AnimatedSection>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((cat, i) => (
-            <AnimatedSection key={cat.title} delay={0.1 * i}>
-              <div className="p-6 rounded-xl bg-card border border-border card-shadow">
-                <h3 className="font-heading font-semibold text-primary mb-4 text-sm uppercase tracking-wider">{cat.title}</h3>
-                <ul className="space-y-2">
-                  {cat.items.map((item) => (
-                    <li key={item} className="text-foreground text-sm flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
+    <Section id="skills" label="./skills" title="The toolbox.">
+      <div className="space-y-10">
+        {SKILL_GROUPS.map(({ title, icon: Icon, items }) => (
+          <div key={title} className="reveal">
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: "1px solid var(--border)" }}
+            >
+              <Icon size={16} className="text-primary" />
+              <h3
+                className="font-mono text-xs uppercase tracking-[0.2em]"
+                style={{ color: "var(--muted-foreground)" }}
+              >
+                {title}
+              </h3>
+            </div>
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              {items.map((s) => (
+                <li
+                  key={s}
+                  className="font-display text-base md:text-lg transition-colors cursor-default"
+                  style={{ color: "var(--foreground)", opacity: 0.8 }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLLIElement).style.color = "var(--primary)";
+                    (e.currentTarget as HTMLLIElement).style.opacity = "1";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLLIElement).style.color = "var(--foreground)";
+                    (e.currentTarget as HTMLLIElement).style.opacity = "0.8";
+                  }}
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }
