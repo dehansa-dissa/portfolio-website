@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Download } from "lucide-react";
 import { TYPE_ROLES, SOCIALS } from "./data";
+import  Dehansa_CV  from "../assets/Dehansa_CV.pdf";
 
 export function Hero() {
   const [text, setText] = useState("");
@@ -77,9 +78,8 @@ export function Hero() {
           className="max-w-xl text-base md:text-lg mb-8 leading-relaxed"
           style={{ color: "var(--muted-foreground)" }}
         >
-          I'm a second-year software engineering undergraduate who likes building products that
-          feel fast, look clean, and ship often. Currently obsessed with type-safe APIs,
-          local-first apps, and developer tooling.
+          I’m a second-year software engineering undergraduate who likes building simple, fast, and user-friendly applications. 
+          I enjoy turning ideas into real world projects and improving them step by step.
         </p>
         <div className="flex flex-wrap gap-3 mb-8">
           <a
@@ -100,7 +100,8 @@ export function Hero() {
             View My Work <ArrowRight size={16} />
           </a>
           <a
-            href="#"
+            href={Dehansa_CV}
+            download
             className="inline-flex items-center gap-2 font-medium px-5 py-3 rounded-lg transition-colors"
             style={{ border: "1px solid var(--border)" }}
             onMouseEnter={(e) => {
@@ -119,6 +120,7 @@ export function Hero() {
           {SOCIALS.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
+              target="_blank"
               href={href}
               aria-label={label}
               className="transition-colors"

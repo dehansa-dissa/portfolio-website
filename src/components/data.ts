@@ -21,7 +21,6 @@ export const NAV = [
 
 export const TYPE_ROLES = [
   "Full-Stack Developer",
-  "Problem Solver",
   "Software Engineering Undergrad",
 ];
 
