@@ -9,7 +9,8 @@ export function Blog() {
         {POSTS.map((p) => (
           <a
             key={p.title}
-            href="#"
+            href={p.Link}
+            target="_blank"
             className="reveal card-hover rounded-xl overflow-hidden flex flex-col group"
             style={{
               backgroundColor: "var(--surface)",
@@ -32,7 +33,7 @@ export function Blog() {
                 {p.date} · {p.read} read
               </p>
               <span className="font-mono text-xs text-primary mt-auto inline-flex items-center gap-1">
-                Read <ArrowRight size={12} />
+                  Read <ArrowRight size={12} />
               </span>
             </div>
           </a>

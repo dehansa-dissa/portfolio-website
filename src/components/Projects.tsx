@@ -44,6 +44,7 @@ export function Projects() {
             >
               <a
                 href={p.github}
+                target="_blank"
                 aria-label={`${p.name} GitHub`}
                 className="transition-colors"
                 style={{ color: "var(--muted-foreground)" }}

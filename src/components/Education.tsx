@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar } from "lucide-react";
+import { GraduationCap, Award } from "lucide-react";
 import { Section } from "./Section";
 import { EDUCATION } from "./data";
 
@@ -27,7 +27,7 @@ export function Education() {
                 border: "1px solid var(--border)",
               }}
             >
-              <div className="flex items-center gap-2 text-primary mb-2">
+            <div className="flex items-center gap-2 text-primary mb-2">
                 <GraduationCap size={16} />
                 <span className="font-mono text-xs">{e.date}</span>
               </div>
@@ -40,11 +40,11 @@ export function Education() {
                   className="text-xs mt-2 font-mono"
                   style={{ color: "var(--muted-foreground)" }}
                 >
-                  <Calendar size={11} style={{ display: "inline", marginRight: 4 }} />
+                  <Award size={11} style={{ display: "inline", marginRight: 4 }} />
                   {e.note}
                 </p>
               )}
-            </div>
+            </div>            
           </div>
         ))}
       </div>

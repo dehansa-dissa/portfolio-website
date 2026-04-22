@@ -135,7 +135,7 @@ export function Contact() {
         </form>
         <div className="reveal space-y-4">
           <p className="leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-            Open to internships, freelance work, and good conversations about engineering,
+            Open to internships and good conversations about engineering,
             design, and side projects.
           </p>
           <div className="space-y-3">

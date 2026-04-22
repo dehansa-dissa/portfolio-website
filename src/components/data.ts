@@ -6,6 +6,7 @@ import {
   Database,
   Wrench,
   Layers,
+  Link,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -49,75 +50,75 @@ export const SKILL_GROUPS = [
 
 export const PROJECTS = [
   {
-    name: "Inkwell",
-    desc: "Collaborative markdown editor with live cursors and version history.",
-    stack: ["React", "Node", "Postgres", "WebSockets"],
+    name: "CorpoVinculo",
+    desc: "Multi-tenant sponsorship management platform with role-based dashboards and dynamic data integration",
+    stack: ["Next.js", "React", "Jira", "Frontend Development"],
     github: "#",
     demo: "#",
   },
   {
-    name: "Pulse Analytics",
-    desc: "Privacy-first product analytics dashboard for indie developers.",
-    stack: ["Next.js", "ClickHouse", "tRPC"],
+    name: "HabitFlow",
+    desc: "Full-stack habit tracker with secure authentication, streak tracking, and real-time progress insights.",
+    stack: ["Spring Boot", "React", "PostgreSQL", "Asgardeo", "REST API"],
     github: "#",
     demo: "#",
   },
   {
-    name: "Chime",
-    desc: "Voice-channel app for small communities, no accounts required.",
-    stack: ["React", "WebRTC", "Go"],
+    name: "Job Listing backend API",
+    desc: "RESTful job listing API with CRUD operations, search functionality, and Dockerized deployment.",
+    stack: ["Spring Boot", "PostgreSQL", "Docker", "REST API", "Postman"],
     github: "#",
     demo: "#",
   },
   {
-    name: "Sift CLI",
-    desc: "Fast file search & ripgrep wrapper with fuzzy ranking.",
-    stack: ["Rust", "CLI"],
+    name: "Movie Signal",
+    desc: "Netflix-style movie streaming web app with dynamic search, filtering, and trending content using TMDb API..",
+    stack: ["React", "JavaScript", "Appwrite", "TMDb API"],
     github: "#",
     demo: "#",
   },
   {
-    name: "Atlas Notes",
-    desc: "Local-first notes app with end-to-end encrypted sync.",
-    stack: ["Svelte", "SQLite", "CRDT"],
+    name: "Save Marine Life",
+    desc: "Awareness website for marine conservation.",
+    stack: ["JavaScript", "HTML", "CSS"],
     github: "#",
     demo: "#",
   },
   {
-    name: "Forge UI",
-    desc: "Headless component library focused on accessibility primitives.",
-    stack: ["TypeScript", "React"],
+    name: "Traffic Data Analysis",
+    desc: "Analysis of traffic patterns from CSV files.",
+    stack: ["Python", "Tkinter"],
     github: "#",
     demo: "#",
   },
 ];
 
 export const CERTS = [
-  { name: "AWS Certified Cloud Practitioner", issuer: "Amazon", date: "2024", verify: "#" },
-  { name: "Meta Front-End Developer", issuer: "Meta", date: "2024", verify: "#" },
-  { name: "MongoDB Associate Developer", issuer: "MongoDB", date: "2023", verify: "#" },
+  { name: "TypeScript Essential Training", issuer: "LinkedIn Learning", date: "2025", verify: "#" },
+  { name: "Python for Beginners", issuer: "University of Moratuwa", date: "2024", verify: "#" },
+  { name: "Algokit Workshop Sri Lanka", issuer: "Algorand Foundation", date: "2025", verify: "#" },
 ];
 
 export const AWARDS = [
-  { title: "1st Place — University Hackathon", desc: "Built an offline-first study tool in 36 hours." },
-  { title: "Dean's List — 4 semesters", desc: "Top 5% academic standing." },
-  { title: "Open Source Contributor", desc: "Merged PRs into 6+ widely-used libraries." },
+  { title: "3rd Place — Startup Today", desc: "Organized by the KDU Entrepreneurship Club." },
+  { title: "IEEE Extreme 2025", desc: "Organized by the IEEE." },
+  { title: "Hult Prize 2025", desc: "Organized by the Hult Prize Foundation." },
 ];
 
 export const POSTS = [
-  { title: "Why I Stopped Reaching for useEffect", date: "Mar 2025", read: "6 min", tag: "react" },
-  { title: "A Quiet Tour of Postgres CTEs", date: "Feb 2025", read: "8 min", tag: "databases" },
-  { title: "Shipping Side Projects in 2 Weekends", date: "Jan 2025", read: "4 min", tag: "career" },
+  { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
+  { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
+  // { title: "Shipping Side Projects in 2 Weekends", date: "Jan 2025", read: "4 min", tag: "career", Link: "#" },
 ];
 
 export const SPORTS = [
-  { title: "University Football Team", org: "Striker", date: "2022 — Present", desc: "Inter-faculty league finalists 2024." },
-  { title: "Marathon Runner", org: "City Half-Marathon", date: "2023", desc: "Finished top 10% of age group." },
+  { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: "Rotaract champions League 2025 - Champions." },
+  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: "Inter house Tournament 2025 - Champions." },
 ];
 
 export const VOLUNTEER = [
-  { title: "Code Mentor", org: "Local high school", date: "2023 — Present", desc: "Weekly intro-to-programming sessions." },
-  { title: "Open Source Maintainer", org: "Community libraries", date: "2022 — Present", desc: "Triaging issues and reviewing PRs." },
+  { title: "Treasurer", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2023 — 2024", desc: "Managed club finances and organized fundraising events." },
+  { title: "Secretarial Team - Vertex'25", org: "IEEE Robotics and Automation Society", date: "2025", desc: "Assisted in organizing the Vertex'25." },
 ];
 
 export const EDUCATION = [
@@ -125,13 +126,19 @@ export const EDUCATION = [
     school: "University of Westminster",
     degree: "B.Eng. Software Engineering",
     date: "2024 — 2028 (expected)",
-    note: "GPA 3.9 / 4.0 · Dean's List",
+    // note: "GPA 3.9 / 4.0 · Dean's List",
   },
   {
     school: "Informatics Institute of Technology",
     degree: "Foundation Certification",
     date: "2023 — 2024",
     note: "Distinction",
+  },
+  {
+    school: "Viharamahadevi Balika Vidyalaya",
+    degree: "Ordinary Level (O/L)",
+    date: "2023 — 2024",
+    note: "9 A's",
   },
 ];
 
