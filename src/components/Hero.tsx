@@ -1,52 +1,139 @@
-import { motion } from "framer-motion";
-import { ArrowDown, Send } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ArrowRight, Download } from "lucide-react";
+import { TYPE_ROLES, SOCIALS } from "./data";
 
-export function HeroSection() {
+export function Hero() {
+  const [text, setText] = useState("");
+  const [roleIdx, setRoleIdx] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const role = TYPE_ROLES[roleIdx];
+    const speed = deleting ? 40 : 80;
+    const t = setTimeout(() => {
+      if (!deleting) {
+        const next = role.slice(0, text.length + 1);
+        setText(next);
+        if (next === role) setTimeout(() => setDeleting(true), 1400);
+      } else {
+        const next = role.slice(0, text.length - 1);
+        setText(next);
+        if (next === "") {
+          setDeleting(false);
+          setRoleIdx((roleIdx + 1) % TYPE_ROLES.length);
+        }
+      }
+    }, speed);
+    return () => clearTimeout(t);
+  }, [text, deleting, roleIdx]);
+
+  const dots = useMemo(
+    () =>
+      Array.from({ length: 18 }).map((_, i) => ({
+        left: `${(i * 53) % 100}%`,
+        top: `${(i * 37) % 100}%`,
+        delay: `${(i % 6) * 0.6}s`,
+        size: 3 + (i % 4),
+      })),
+    []
+  );
+
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Subtle grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px"
-      }} />
-
-      {/* Glow orb */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
-
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <p className="text-primary font-heading text-sm tracking-widest uppercase mb-4">Hello, I'm</p>
-          <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-4">
-            Dehansa<br />
-            <span className="text-gradient">Dissanayake</span>
-          </h1>
-          <p className="text-lg text-muted-foreground mb-2">
-            Software Engineering Student · Full-Stack Developer
-          </p>
-          <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-            Building scalable, secure, and elegant applications that make a real-world impact.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+    >
+      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none">
+        {dots.map((d, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full float-dot"
+            style={{
+              left: d.left,
+              top: d.top,
+              width: d.size,
+              height: d.size,
+              animationDelay: d.delay,
+              backgroundColor: "var(--primary)",
+              opacity: 0.4,
+            }}
+          />
+        ))}
+      </div>
+      <div className="relative mx-auto max-w-6xl px-6 w-full">
+        <p className="font-mono text-sm text-primary mb-4">{"// Hi, I'm —"}</p>
+        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-4">
+          Dehansa Dissanayake.
+        </h1>
+        <h2
+          className="font-display text-2xl md:text-4xl mb-6"
+          style={{ color: "var(--muted-foreground)", minHeight: "2.5rem" }}
         >
+          <span style={{ color: "var(--foreground)" }}>{text}</span>
+          <span className="text-primary animate-pulse">|</span>
+        </h2>
+        <p
+          className="max-w-xl text-base md:text-lg mb-8 leading-relaxed"
+          style={{ color: "var(--muted-foreground)" }}
+        >
+          I'm a second-year software engineering undergraduate who likes building products that
+          feel fast, look clean, and ship often. Currently obsessed with type-safe APIs,
+          local-first apps, and developer tooling.
+        </p>
+        <div className="flex flex-wrap gap-3 mb-8">
           <a
             href="#projects"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-heading font-medium text-sm hover:opacity-90 transition-opacity glow"
+            className="btn-glow inline-flex items-center gap-2 font-medium px-5 py-3 rounded-lg transition-all"
+            style={{
+              backgroundColor: "var(--primary)",
+              color: "var(--primary-foreground)",
+              transform: "translateY(0)",
+            }}
+            onMouseEnter={(e) =>
+              ((e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)")
+            }
+            onMouseLeave={(e) =>
+              ((e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)")
+            }
           >
-            View Projects <ArrowDown className="h-4 w-4" />
+            View My Work <ArrowRight size={16} />
           </a>
           <a
-            href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-heading font-medium text-sm hover:bg-secondary transition-colors"
+            href="#"
+            className="inline-flex items-center gap-2 font-medium px-5 py-3 rounded-lg transition-colors"
+            style={{ border: "1px solid var(--border)" }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--primary)";
+              (e.currentTarget as HTMLAnchorElement).style.color = "var(--primary)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border)";
+              (e.currentTarget as HTMLAnchorElement).style.color = "";
+            }}
           >
-            Contact Me <Send className="h-4 w-4" />
+            <Download size={16} /> Download CV
           </a>
-        </motion.div>
+        </div>
+        <div className="flex items-center gap-4">
+          {SOCIALS.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              aria-label={label}
+              className="transition-colors"
+              style={{ color: "var(--muted-foreground)" }}
+              onMouseEnter={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.color = "var(--primary)")
+              }
+              onMouseLeave={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.color = "var(--muted-foreground)")
+              }
+            >
+              <Icon size={20} />
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
