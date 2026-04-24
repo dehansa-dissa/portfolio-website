@@ -4,40 +4,26 @@ import { SKILL_GROUPS } from "./data";
 export function Skills() {
   return (
     <Section id="skills" label="./skills" title="The toolbox.">
-      <div className="space-y-10">
+      <div className="grid sm:grid-cols-2 gap-6">
         {SKILL_GROUPS.map(({ title, icon: Icon, items }) => (
-          <div key={title} className="reveal">
-            <div
-              className="flex items-center gap-2 mb-4 pb-2"
-              style={{ borderBottom: "1px solid var(--border)" }}
-            >
-              <Icon size={16} className="text-primary" />
-              <h3
-                className="font-mono text-xs uppercase tracking-[0.2em]"
-                style={{ color: "var(--muted-foreground)" }}
-              >
-                {title}
-              </h3>
+          <div
+            key={title}
+            className="reveal bg-surface border border-border rounded-xl p-6"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <Icon size={18} className="text-primary" />
+              <h3 className="font-display font-semibold">{title}</h3>
             </div>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <div className="flex flex-wrap gap-2">
               {items.map((s) => (
-                <li
+                <span
                   key={s}
-                  className="font-display text-base md:text-lg transition-colors cursor-default"
-                  style={{ color: "var(--foreground)", opacity: 0.8 }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLLIElement).style.color = "var(--primary)";
-                    (e.currentTarget as HTMLLIElement).style.opacity = "1";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLLIElement).style.color = "var(--foreground)";
-                    (e.currentTarget as HTMLLIElement).style.opacity = "0.8";
-                  }}
+                  className="font-mono text-xs px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors cursor-default"
                 >
                   {s}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
       </div>
