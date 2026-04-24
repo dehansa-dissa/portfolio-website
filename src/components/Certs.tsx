@@ -41,6 +41,7 @@ export function Certs() {
                 </div>
                 <a
                   href={c.verify}
+                  target="_blank"
                   className="font-mono text-xs shrink-0 text-primary hover:underline"
                 >
                   verify →

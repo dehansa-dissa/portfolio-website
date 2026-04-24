@@ -11,7 +11,7 @@ function ListItem({
   title: string;
   org: string;
   date: string;
-  desc: string;
+  desc?: string[];
 }) {
   return (
     <div
@@ -37,9 +37,11 @@ function ListItem({
         </span>
       </div>
       <p className="text-xs font-mono text-primary mb-1">{org}</p>
-      <p className="text-sm" style={{ color: "var(--muted-foreground)" }}>
-        {desc}
-      </p>
+      <div className="text-sm" style={{ color: "var(--muted-foreground)" }}>
+        {desc && desc.map((d, i) => (
+          <div key={i}>{d}</div>
+        ))}
+      </div>
     </div>
   );
 }

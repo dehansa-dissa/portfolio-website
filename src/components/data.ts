@@ -94,30 +94,35 @@ export const PROJECTS = [
 
 export const CERTS = [
   { name: "TypeScript Essential Training", issuer: "LinkedIn Learning", date: "2025", verify: "#" },
-  { name: "Python for Beginners", issuer: "University of Moratuwa", date: "2024", verify: "#" },
   { name: "Algokit Workshop Sri Lanka", issuer: "Algorand Foundation", date: "2025", verify: "#" },
+  { name: "Learning Java", issuer: "LinkedIn Learning", date: "2025", verify: "#" },
+  { name: "Learning Git and Github", issuer: "LinkedIn Learning", date: "2025", verify: "#" },
+  { name: "Python for Beginners", issuer: "University of Moratuwa", date: "2024", verify: "#" },
 ];
 
 export const AWARDS = [
-  { title: "3rd Place — Startup Today", desc: "Organized by the KDU Entrepreneurship Club." },
-  { title: "IEEE Extreme 2025", desc: "Organized by the IEEE." },
-  { title: "Hult Prize 2025", desc: "Organized by the Hult Prize Foundation." },
+  { title: "Startup Today — 3rd Place", desc: "Organized by the KDU Entrepreneurship Club." },
+  { title: "IX 2026 — Participation", desc: "Organized by the IEEE of IIT." },
+  { title: "IEEE Extreme 2025 — Participation", desc: "Organized by the IEEE." },
+  { title: "Hult Prize 2025 — Participation", desc: "Organized by the Hult Prize Foundation." },
 ];
 
 export const POSTS = [
   { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
   { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
-  // { title: "Shipping Side Projects in 2 Weekends", date: "Jan 2025", read: "4 min", tag: "career", Link: "#" },
 ];
 
 export const SPORTS = [
-  { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: "Rotaract champions League 2025 - Champions." },
-  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: "Inter house Tournament 2025 - Champions." },
+  { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: ["Rotaract champions League 2025 - Champions.", "Rotaract champions League 2026 - 3rd Place.", "CIMA Cricket Tournament 2025 - Champions."] },
+  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: ["Inter house Tournament 2025 - Champions."] },
+  { title: "Athlete", org: "IIT Inter-House Sportsmeet - Gamini House", date: "2024 - Present", desc: ["Women’s Cricket 2024 - Runners up.", "Women’s Football 2025 - Champions.", "Women’s High Jump 2025 - 3rd Place", "Women’s High Jump 2024 - 3rd Place", "Women’s 100x4 Relay 2024 - 2nd Place", "Women’s 100m 2024 - Finalist"] },
 ];
 
 export const VOLUNTEER = [
-  { title: "Treasurer", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2023 — 2024", desc: "Managed club finances and organized fundraising events." },
-  { title: "Secretarial Team - Vertex'25", org: "IEEE Robotics and Automation Society", date: "2025", desc: "Assisted in organizing the Vertex'25." },
+  { title: "Treasurer", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2023 — 2024", },
+  { title: "Membership Development Team - TechTrek", org: "IEEE Robotics and Automation Society", date: "2026", },
+  { title: "Secretarial Team - Vertex'25", org: "IEEE Robotics and Automation Society", date: "2025", },
+  { title: "Green-life Director", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2022-2023", },
 ];
 
 export const EDUCATION = [
