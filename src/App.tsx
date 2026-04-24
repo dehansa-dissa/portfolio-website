@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { NAV } from "./components/data";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
-import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Certs } from "./components/Certs";
 import { Blog } from "./components/Blog";
-import { Extracurricular } from "./components/Extracurricular";
+import { Skills } from "./components/Skills";
 import { Education } from "./components/Education";
+import { Extracurricular } from "./components/Extracurricular";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { BackToTop } from "./components/BackToTop";
@@ -82,12 +82,12 @@ function App() {
         setMenuOpen={setMenuOpen}
       />
       <Hero />
-      <Skills />
       <Projects />
       <Certs />
       <Blog />
-      <Extracurricular />
+      <Skills />
       <Education />
+      <Extracurricular />
       <Contact />
       <Footer />
       <BackToTop />

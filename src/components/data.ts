@@ -10,12 +10,12 @@ import {
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const NAV = [
-  { id: "skills", label: "skills" },
   { id: "projects", label: "projects" },
   { id: "certs", label: "certs" },
   { id: "blog", label: "blog" },
-  { id: "extracurricular", label: "extracurricular" },
+  { id: "skills", label: "skills" },
   { id: "education", label: "education" },
+  { id: "extracurricular", label: "extracurricular" },
   { id: "contact", label: "contact" },
 ];
 
@@ -24,28 +24,6 @@ export const TYPE_ROLES = [
   "Software Engineering Undergrad",
 ];
 
-export const SKILL_GROUPS = [
-  {
-    title: "Languages",
-    icon: Code2,
-    items: ["Java", "TypeScript", "JavaScript", "Python", "SQL" ],
-  },
-  {
-    title: "Frameworks",
-    icon: Layers,
-    items: ["React", "Next.js", "Spring Boot"],
-  },
-  {
-    title: "Databases",
-    icon: Database,
-    items: ["PostgreSQL", "MySQL", "AppWrite"],
-  },
-  {
-    title: "Tools",
-    icon: Wrench,
-    items: ["Git", "GitHub", "Docker", "Vite", "Figma", "Postman"],
-  },
-];
 
 export const PROJECTS = [
   {
@@ -107,6 +85,29 @@ export const AWARDS = [
   { title: "Hult Prize 2025 — Participation", desc: "Organized by the Hult Prize Foundation." },
 ];
 
+export const SKILL_GROUPS = [
+  {
+    title: "Languages",
+    icon: Code2,
+    items: ["Java", "TypeScript", "JavaScript", "Python", "SQL" ],
+  },
+  {
+    title: "Frameworks",
+    icon: Layers,
+    items: ["React", "Next.js", "Spring Boot"],
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    items: ["PostgreSQL", "MySQL", "AppWrite"],
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    items: ["Git", "GitHub", "Docker", "Vite", "Figma", "Postman"],
+  },
+];
+
 export const POSTS = [
   { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
   { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
@@ -140,7 +141,7 @@ export const EDUCATION = [
   },
   {
     school: "Viharamahadevi Balika Vidyalaya",
-    degree: "Ordinary Level (O/L)",
+    degree: "G.C.E. Ordinary Level",
     date: "2023 — 2024",
     note: "9 A's",
   },
