@@ -15,7 +15,7 @@ export function Section({
     <section id={id} className="relative py-24 border-t border-border">
       <div
         aria-hidden="true"
-        className="hidden lg:flex absolute left-4 top-24 flex-col items-center gap-3 select-none"
+        className=" pl-11 hidden lg:flex absolute left-4 top-24 flex-col items-center gap-3 select-none"
       >
         <span
           className="font-mono text-xs uppercase tracking-[0.3em] text-primary"
@@ -27,7 +27,7 @@ export function Section({
       </div>
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mb-10">
-          <span className="section-label">{label}</span>
+          {/* <span className="section-label">{label}</span> */}
           <h2 className="font-display text-3xl md:text-4xl font-bold">{title}</h2>
         </div>
         {children}
