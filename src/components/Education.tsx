@@ -13,9 +13,11 @@ export function Education() {
         {EDUCATION.map((e) => (
           <div key={e.school} className="reveal relative mb-8 last:mb-0">
             <span
-              className="absolute top-1.5 h-3 w-3 rounded-full"
+              className="absolute h-3 w-3 rounded-full"
               style={{
-                left: "-26px",
+                left: "-24px", 
+                top: "50%", 
+                transform: "translate(-50%, -50%)",
                 backgroundColor: "var(--primary)",
                 outline: "4px solid var(--background)",
               }}
