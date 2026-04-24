@@ -18,7 +18,7 @@ export function Section({
         className=" pl-11 hidden lg:flex absolute left-4 top-24 flex-col items-center gap-3 select-none"
       >
         <span
-          className="font-mono text-xs uppercase tracking-[0.3em] text-primary"
+          className="font-mono text-l uppercase tracking-[0.3em] text-primary"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           {label.replace("./", "")}

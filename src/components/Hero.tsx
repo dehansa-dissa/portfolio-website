@@ -78,7 +78,7 @@ export function Hero() {
           className="max-w-xl text-base md:text-lg mb-8 leading-relaxed"
           style={{ color: "var(--muted-foreground)" }}
         >
-          I’m a second-year software engineering undergraduate who likes building simple, fast, and user-friendly applications. 
+          {/* I’m a second-year software engineering undergraduate who likes building simple, fast, and user-friendly applications.  */}
           I enjoy turning ideas into real world projects and improving them step by step.
         </p>
         <div className="flex flex-wrap gap-3 mb-8">

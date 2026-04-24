@@ -59,6 +59,7 @@ export function Projects() {
               </a>
               <a
                 href={p.demo}
+                target="_blank"
                 className="font-mono text-xs transition-colors inline-flex items-center gap-1"
                 style={{ color: "var(--muted-foreground)" }}
                 onMouseEnter={(e) =>
