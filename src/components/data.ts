@@ -87,8 +87,22 @@ export const AWARDS = [
 
 
 export const POSTS = [
-  { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
-  { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
+  {
+    title: "OOP Concepts in Java Explained Simply",
+    date: "Mar 202",
+    read: "6 min",
+    tag: "OOP",
+    Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12",
+    img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*496BD93kFtz2ipAmco7PyQ.png"
+  },
+  {
+    title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication",
+    date: "April 2026",
+    read: "5 min",
+    tag: "Asgardeo",
+    Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9",
+    img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*DukOlnyca-hwP2S4Y7yWbA.jpeg"
+  },
 ];
 
 export const SKILL_GROUPS = [

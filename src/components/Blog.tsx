@@ -18,12 +18,21 @@ export function Blog() {
             }}
           >
             <div
-              className="h-32 w-full"
+              className="h-32 w-full relative flex items-center justify-center overflow-hidden"
               style={{
                 background:
                   "linear-gradient(135deg, var(--accent-glow), transparent 70%), var(--surface-2)",
               }}
-            />
+            >
+              {p.img && (
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              )}
+            </div>
             <div className="p-5 flex-1 flex flex-col">
               <span className="font-mono text-[11px] text-primary mb-2">#{p.tag}</span>
               <h3 className="font-display font-semibold mb-3 leading-snug transition-colors group-hover:text-primary">
