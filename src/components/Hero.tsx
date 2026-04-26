@@ -30,7 +30,7 @@ export function Hero() {
 
   const dots = useMemo(
     () =>
-      Array.from({ length: 18 }).map((_, i) => ({
+      Array.from({ length: 25 }).map((_, i) => ({
         left: `${(i * 53) % 100}%`,
         top: `${(i * 37) % 100}%`,
         delay: `${(i % 6) * 0.6}s`,
