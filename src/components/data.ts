@@ -85,6 +85,12 @@ export const AWARDS = [
   { title: "Hult Prize 2025 — Participation", desc: "Organized by the Hult Prize Foundation." },
 ];
 
+
+export const POSTS = [
+  { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
+  { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
+];
+
 export const SKILL_GROUPS = [
   {
     title: "Languages",
@@ -108,24 +114,6 @@ export const SKILL_GROUPS = [
   },
 ];
 
-export const POSTS = [
-  { title: "OOP Concepts in Java Explained Simply", date: "Mar 202", read: "6 min", tag: "OOP", Link: "https://medium.com/@deha.dissa/oop-concepts-in-java-explained-simply-with-examples-for-beginners-990f27d75d12" },
-  { title: "Asgardeo by WSO2: A Simple Guide to Modern Authentication", date: "April 2026", read: "5 min", tag: "Asgardeo", Link: "https://medium.com/@deha.dissa/asgardeo-by-wso2-a-simple-guide-to-modern-authentication-0615997f0eb9" },
-];
-
-export const SPORTS = [
-  { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: ["Rotaract champions League 2025 - Champions.", "Rotaract champions League 2026 - 3rd Place.", "CIMA Cricket Tournament 2025 - Champions."] },
-  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: ["Inter house Tournament 2025 - Champions."] },
-  { title: "Athlete", org: "IIT Inter-House Sportsmeet - Gamini House", date: "2024 - Present", desc: ["Women’s Cricket 2024 - Runners up.", "Women’s Football 2025 - Champions.", "Women’s High Jump 2025 - 3rd Place", "Women’s High Jump 2024 - 3rd Place", "Women’s 100x4 Relay 2024 - 2nd Place", "Women’s 100m 2024 - Finalist"] },
-];
-
-export const VOLUNTEER = [
-  { title: "Treasurer", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2023 — 2024", },
-  { title: "Membership Development Team - TechTrek", org: "IEEE Robotics and Automation Society", date: "2026", },
-  { title: "Secretarial Team - Vertex'25", org: "IEEE Robotics and Automation Society", date: "2025", },
-  { title: "Green-life Director", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2022-2023", },
-];
-
 export const EDUCATION = [
   {
     school: "University of Westminster",
@@ -146,6 +134,20 @@ export const EDUCATION = [
     note: "9 A's",
   },
 ];
+
+export const SPORTS = [
+  { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: ["Rotaract Champions League 2025 - Champions.", "Rotaract Champions League 2026 - 3rd Place.", "CIMA Cricket Tournament 2025 - Champions."] },
+  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: ["Inter house Tournament 2025 - Champions."] },
+  { title: "Athlete", org: "IIT Inter-House Sportsmeet - Gamini House", date: "2024 - Present", desc: ["Women’s Cricket 2024 - Runners up.", "Women’s Football 2025 - Champions.", "Women’s High Jump 2025 - 3rd Place", "Women’s High Jump 2024 - 3rd Place", "Women’s 100x4 Relay 2024 - 2nd Place", "Women’s 100m 2024 - Finalist"] },
+];
+
+export const VOLUNTEER = [
+  { title: "Treasurer", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2023 — 2024", },
+  { title: "Membership Development Team - TechTrek", org: "IEEE Robotics and Automation Society", date: "2026", },
+  { title: "Secretarial Team - Vertex'25", org: "IEEE Robotics and Automation Society", date: "2025", },
+  { title: "Green-life Director", org: "Interact Club of Viharamahadevi Balika Vidyalaya", date: "2022-2023", },
+];
+
 
 export const SOCIALS = [
   { icon: FaGithub, href: "https://github.com/dehansa-dissa", label: "GitHub" },
