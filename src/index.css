@@ -7,16 +7,15 @@
 
 /* Light mode (default) */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(91.475% 0.01484 80.64);
-  --foreground: oklch(0.18 0 0);
-  --surface: oklch(1 0 0);
-  --surface-2: oklch(0.94 0 0);
-  --border: oklch(0.88 0 0);
-  --muted-foreground: oklch(0.45 0 0);
-  --primary: oklch(0.7 0.2 45);
-  --primary-foreground: oklch(1 0 0);
-  --accent-glow: rgba(255, 107, 0, 0.18);
+--background: oklch(0.97 0 0);
+--foreground: oklch(0.18 0 0);
+--surface: oklch(0.94 0 0);
+--surface-2: oklch(0.90 0 0);
+--border: oklch(0.82 0 0);
+--muted-foreground: oklch(0.45 0 0);
+--primary: oklch(0.62 0.22 45);
+--primary-foreground: oklch(0.98 0 0);
+--accent-glow: rgba(255, 107, 0, 0.12);
 }
 
 .dark {
