@@ -8,7 +8,7 @@
 /* Light mode (default) */
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.97 0 0);
+  --background: oklch(91.475% 0.01484 80.64);
   --foreground: oklch(0.18 0 0);
   --surface: oklch(1 0 0);
   --surface-2: oklch(0.94 0 0);
