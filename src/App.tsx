@@ -3,9 +3,9 @@ import { NAV } from "./components/data";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
-import { Certs } from "./components/Certs";
-import { Blog } from "./components/Blog";
 import { Skills } from "./components/Skills";
+import { Blog } from "./components/Blog";
+import { Certs } from "./components/Certs";
 import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
 import { Contact } from "./components/Contact";
@@ -83,9 +83,9 @@ function App() {
       />
       <Hero />
       <Projects />
-      <Certs />
-      <Blog />
       <Skills />
+      <Blog />
+      <Certs />
       <Education />
       <Extracurricular />
       <Contact />

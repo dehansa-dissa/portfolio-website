@@ -11,9 +11,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const NAV = [
   { id: "projects", label: "projects" },
-  { id: "certs", label: "certs" },
-  { id: "blog", label: "blog" },
   { id: "skills", label: "skills" },
+  { id: "blog", label: "blog" },
+  { id: "certs", label: "certs" },
   { id: "education", label: "education" },
   { id: "extracurricular", label: "extracurricular" },
   { id: "contact", label: "contact" },
