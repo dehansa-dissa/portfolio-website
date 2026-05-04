@@ -79,10 +79,10 @@ export const CERTS = [
 ];
 
 export const AWARDS = [
-  { title: "Startup Today — 3rd Place", desc: "Organized by the KDU Entrepreneurship Club." },
+  { title: "Startup Today 2026 — 3rd Place", desc: "Organized by the KDU Entrepreneurship Club." },
+  { title: "Hult Prize 2026 — Nationals", desc: "Organized by the Hult Prize Foundation." },
   { title: "IX 2026 — Participation", desc: "Organized by the IEEE of IIT." },
   { title: "IEEE Extreme 2025 — Participation", desc: "Organized by the IEEE." },
-  { title: "Hult Prize 2025 — Participation", desc: "Organized by the Hult Prize Foundation." },
 ];
 
 
