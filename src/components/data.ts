@@ -151,7 +151,7 @@ export const EDUCATION = [
 
 export const SPORTS = [
   { title: "Team Captain", org: "IIT Women's Cricket Team", date: "2026 — Present", desc: ["Rotaract Champions League 2025 - Champions.", "Rotaract Champions League 2026 - 3rd Place.", "CIMA Cricket Tournament 2025 - Champions."] },
-  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: ["Inter house Tournament 2025 - Champions."] },
+  { title: "All-rounder", org: "MCA Women's Cricket Team", date: "2024 - Present", desc: ["Inter house Tournament 2026 - Runners up.", "Inter house Tournament 2025 - Champions."] },
   { title: "Athlete", org: "IIT Inter-House Sportsmeet - Gamini House", date: "2024 - Present", desc: ["Women’s Cricket 2024 - Runners up.", "Women’s Football 2025 - Champions.", "Women’s High Jump 2025 - 3rd Place", "Women’s High Jump 2024 - 3rd Place", "Women’s 100x4 Relay 2024 - 2nd Place", "Women’s 100m 2024 - Finalist"] },
 ];
 
